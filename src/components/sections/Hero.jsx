@@ -18,13 +18,13 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
+      <div className="relative py-24 md:py-0 z-10 max-w-6xl mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
             Dinner in the Dark
           </h1>
           
@@ -33,38 +33,44 @@ export default function Hero() {
             en tegelijkertijd een goed doel steunt.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12 max-w-4xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700"
+              className="bg-gray-800/50 rounded-lg p-4 md:p-6 backdrop-blur-sm border border-gray-700 flex md:flex-col items-center md:text-center text-left gap-3 md:gap-0"
             >
-              <Calendar className="w-8 h-8 text-amber-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Data</h3>
-              <p className="text-gray-300">31 oktober & 1 november</p>
+              <Calendar className="w-6 h-6 md:w-8 md:h-8 text-amber-400 flex-shrink-0 md:mx-auto md:mb-4" />
+              <div className="flex-1 md:flex-none">
+                <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Data</h3>
+                <p className="text-sm md:text-base text-gray-300">31 oktober & 1 november</p>
+              </div>
             </motion.div>
 
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700"
+              className="bg-gray-800/50 rounded-lg p-4 md:p-6 backdrop-blur-sm border border-gray-700 flex md:flex-col items-center md:text-center text-left gap-3 md:gap-0"
             >
-              <MapPin className="w-8 h-8 text-amber-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Locatie</h3>
-              <p className="text-gray-300">Van Renesselaan 30a<br />3703 AJ Zeist</p>
+              <MapPin className="w-6 h-6 md:w-8 md:h-8 text-amber-400 flex-shrink-0 md:mx-auto md:mb-4" />
+              <div className="flex-1 md:flex-none">
+                <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Locatie</h3>
+                <p className="text-sm md:text-base text-gray-300">Van Renesselaan 30a<br />3703 AJ Zeist</p>
+              </div>
             </motion.div>
 
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700"
+              className="bg-gray-800/50 rounded-lg p-4 md:p-6 backdrop-blur-sm border border-gray-700 flex md:flex-col items-center md:text-center text-left gap-3 md:gap-0"
             >
-              <Euro className="w-8 h-8 text-amber-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Prijs</h3>
-              <p className="text-gray-300">€55 per persoon</p>
+              <Euro className="w-6 h-6 md:w-8 md:h-8 text-amber-400 flex-shrink-0 md:mx-auto md:mb-4" />
+              <div className="flex-1 md:flex-none">
+                <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Prijs</h3>
+                <p className="text-sm md:text-base text-gray-300">€55 per persoon</p>
+              </div>
             </motion.div>
           </div>
 

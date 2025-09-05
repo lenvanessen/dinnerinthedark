@@ -1,15 +1,14 @@
-
 import React, { useState, useEffect } from "react";
 import { Calendar, MapPin, Euro, Heart, Clock, Users, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
-import Hero from "../components/sections/Hero";
-import EventDetails from "../components/sections/EventDetails";
 import About from "../components/sections/About";
 import Bartimeus from "../components/sections/Bartimeus";
 import Contact from "../components/sections/Contact";
+import EventDetails from "../components/sections/EventDetails";
+import Hero from "../components/sections/Hero";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
