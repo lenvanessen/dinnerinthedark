@@ -72,8 +72,8 @@ export default function Contact() {
 
             <Card className="bg-gradient-to-b from-amber-500/10 to-orange-500/10 border-amber-500/20">
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Belangrijke Informatie</h3>
-                <ul className="space-y-3 text-sm text-gray-800">
+                <h3 className="text-lg font-semibold text-white mb-4">Belangrijke Informatie</h3>
+                <ul className="space-y-3 text-sm text-white">
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-amber-400 rounded-full mt-2"></div>
                     <span>Beperkt aantal plaatsen beschikbaar</span>
