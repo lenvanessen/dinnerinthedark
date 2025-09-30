@@ -47,7 +47,7 @@ export default function Home() {
             <div className="flex items-center">
               <a href="#" aria-label="Home">
                 <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68bac8610a9a91508177e5bd/6d5f1b0df_f9f1087d7_Ontwerpzondertitel1.png" 
+                  src="/logo.png"
                   alt="Dinner in the Dark logo" 
                   className="h-16 w-auto transition-transform duration-300 hover:scale-105"
                 />
