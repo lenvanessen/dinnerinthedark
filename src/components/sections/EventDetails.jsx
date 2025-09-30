@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function EventDetails() {
   return (
-    <section id="details" className="py-20 bg-gray-900">
+    <section id="details" className="py-20 bg-gray-900" aria-labelledby="details-title">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -16,7 +16,7 @@ export default function EventDetails() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <h2 id="details-title" className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Evenement Details
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -40,10 +40,10 @@ export default function EventDetails() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="bg-gradient-to-r from-orange-500/10 to-amber-500/10 rounded-lg p-6 border border-amber-500/20">
+                <div className="bg-gradient-to-r from-amber-500/10 to-amber-600/10 rounded-lg p-6 border border-amber-500/20">
                   <div className="flex items-center gap-3 mb-4">
-                    <Badge className="bg-orange-600 text-white">Donderdag</Badge>
-                    <h3 className="text-xl font-semibold text-white">31 Oktober 2024</h3>
+                    <Badge className="bg-amber-600 text-white">Vrijdag</Badge>
+                    <h3 className="text-xl font-semibold text-white">31 Oktober 2025</h3>
                   </div>
                   <div className="flex items-center gap-2 text-gray-300">
                     <Clock className="w-5 h-5" />
@@ -51,10 +51,10 @@ export default function EventDetails() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-orange-500/10 to-amber-500/10 rounded-lg p-6 border border-amber-500/20">
+                <div className="bg-gradient-to-r from-amber-500/10 to-amber-600/10 rounded-lg p-6 border border-amber-500/20">
                   <div className="flex items-center gap-3 mb-4">
-                    <Badge className="bg-orange-600 text-white">Vrijdag</Badge>
-                    <h3 className="text-xl font-semibold text-white">1 November 2024</h3>
+                    <Badge className="bg-amber-600 text-white">Zaterdag</Badge>
+                    <h3 className="text-xl font-semibold text-white">1 November 2025</h3>
                   </div>
                   <div className="flex items-center gap-2 text-gray-300">
                     <Clock className="w-5 h-5" />
@@ -64,7 +64,7 @@ export default function EventDetails() {
 
                 <div className="bg-gray-700/50 rounded-lg p-4">
                   <p className="text-sm text-gray-400">
-                    <strong>Aankomst:</strong> 18:45 voor ontvangst en instructies
+                    <strong>Aankomst:</strong> 18:30 voor ontvangst en instructies
                   </p>
                 </div>
               </CardContent>
@@ -125,7 +125,7 @@ export default function EventDetails() {
               </CardHeader>
               <CardContent>
                 <div className="text-center bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-lg p-8 border border-green-500/20">
-                  <div className="text-5xl font-bold text-white mb-2">€55</div>
+                  <div className="text-5xl font-bold text-white mb-2">€62</div>
                   <div className="text-lg text-gray-300 mb-4">per persoon</div>
                   <Badge className="bg-green-600 text-white">Volledige opbrengst naar Bartiméus</Badge>
                 </div>
@@ -156,10 +156,10 @@ export default function EventDetails() {
                     <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
                     <span>Welkomstdrankje</span>
                   </div>
-                  <div className="flex items-center gap-3 text-gray-300">
+                  {/* Removed: <div className="flex items-center gap-3 text-gray-300">
                     <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
                     <span>Begeleiding door ervaren staff</span>
-                  </div>
+                  </div> */}
                   <div className="flex items-center gap-3 text-gray-300">
                     <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
                     <span>Unieke zintuiglijke ervaring</span>

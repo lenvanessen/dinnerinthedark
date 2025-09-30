@@ -1,11 +1,13 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Heart, Users, Home, Briefcase, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Bartimeus() {
   return (
-    <section id="bartimeus" className="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
+    <section id="bartimeus" className="py-20 bg-gradient-to-b from-gray-800 to-gray-900" aria-labelledby="bartimeus-title">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -14,7 +16,7 @@ export default function Bartimeus() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <h2 id="bartimeus-title" className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Een Avond voor het Goede Doel
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -31,20 +33,35 @@ export default function Bartimeus() {
           transition={{ delay: 0.1 }}
           className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 md:p-12 border border-blue-500/20 mb-16"
         >
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-shrink-0">
-              <div className="w-24 h-24 bg-blue-500 rounded-full flex items-center justify-center">
-                <Users className="w-12 h-12 text-white" />
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center">
+            <div className="md:col-span-2">
+              <img 
+                src="https://jci-utrecht.nl/wp-content/uploads/2023/07/NC-Lunch-2022-24-scaled-e1688317040171.jpg" 
+                alt="Leden van JCI Utrecht" 
+                className="rounded-lg shadow-xl w-full h-auto object-cover aspect-[4/3]"
+              />
             </div>
-            <div className="flex-1 text-center md:text-left">
+            <div className="md:col-span-3 text-center md:text-left">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Over JCI Utrecht</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 JCI (Junior Chamber International) Utrecht is een netwerk van jonge, ondernemende mensen 
                 die zich inzetten voor persoonlijke ontwikkeling en een positieve impact op de maatschappij. 
                 Met projecten zoals Dinner in the Dark willen we niet alleen een unieke ervaring bieden, maar ook 
                 concreet bijdragen aan belangrijke maatschappelijke doelen.
               </p>
+              <a 
+                href="https://jci-utrecht.nl/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <Button 
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                  aria-label="Bezoek de website van JCI Utrecht voor meer informatie (opent in nieuw venster)"
+                >
+                  Meer over JCI Utrecht
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>
@@ -57,98 +74,59 @@ export default function Bartimeus() {
           transition={{ delay: 0.2 }}
           className="bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-2xl p-8 md:p-12 border border-red-500/20 mb-16"
         >
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-shrink-0">
-              <div className="w-24 h-24 bg-red-500 rounded-full flex items-center justify-center">
-                <Heart className="w-12 h-12 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center">
+            <div className="md:col-span-3 text-center md:text-left">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Heart className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white">De Missie van Bartiméus</h3>
+              </div>
+              <p className="text-lg text-gray-300 leading-relaxed mb-2">
+                Het Bartiméus Fonds heeft een missie: wij willen dat mensen met een visuele beperking voluit kunnen meedoen in de samenleving. We zetten alles op alles om dat te bereiken.
+              </p>
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                Concreet draagt Dinner in the Dark bij aan het openhouden van het zwembad van Bartiméus, zwembad De Bies in Doorn.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href="https://bartimeus.nl/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Button 
+                    className="bg-red-600 hover:bg-red-700 text-white"
+                    aria-label="Bezoek de website van Bartiméus voor meer informatie (opent in nieuw venster)"
+                  >
+                    Meer over Bartiméus
+                  </Button>
+                </a>
+                <a 
+                  href="https://bartimeusfonds.nl/zwembadcampagne/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Button 
+                    variant="outline"
+                    className="border-red-500 text-red-400 hover:bg-red-500/10 hover:text-red-300"
+                    aria-label="Lees meer over de zwembadcampagne van Bartiméus (opent in nieuw venster)"
+                  >
+                    Meer over het zwembad
+                  </Button>
+                </a>
               </div>
             </div>
-            <div className="flex-1 text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">De Missie van Bartiméus</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Bartiméus gelooft dat iedereen het recht heeft om een zelfstandig en zinvol leven te leiden. 
-                Zij bieden ondersteuning, begeleiding en innovatieve oplossingen aan mensen met 
-                een visuele beperking, zodat zij hun dromen kunnen waarmaken.
-              </p>
+            <div className="md:col-span-2">
+              <img 
+                src="https://bartimeus.nl/media/cache/generic/rc/71d1nXVo/uploads/media/621dd41c12569/so-leerling-slechtzien.png" 
+                alt="Bartiméus begeleiding voor mensen met visuele beperking" 
+                className="rounded-lg shadow-xl w-full h-auto object-cover aspect-[4/3]"
+              />
             </div>
           </div>
         </motion.div>
-        
-        <div className="text-center mb-16">
-            <h3 className="text-2xl font-semibold text-white">Hoe Bartiméus helpt</h3>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <Card className="bg-gray-800 border-gray-700 h-full">
-              <CardContent className="p-8 text-center">
-                <Home className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-4">Wonen & Leven</h3>
-                <p className="text-gray-400">
-                  Ondersteuning bij zelfstandig wonen en dagelijkse activiteiten.
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <Card className="bg-gray-800 border-gray-700 h-full">
-              <CardContent className="p-8 text-center">
-                <Briefcase className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-4">Werk & Carrière</h3>
-                <p className="text-gray-400">
-                  Begeleiding bij het vinden en behouden van een passende baan.
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-          >
-            <Card className="bg-gray-800 border-gray-700 h-full">
-              <CardContent className="p-8 text-center">
-                <GraduationCap className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-4">Onderwijs</h3>
-                <p className="text-gray-400">
-                  Onderwijs en training op maat voor kinderen, jongeren en volwassenen.
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-          >
-            <Card className="bg-gray-800 border-gray-700 h-full">
-              <CardContent className="p-8 text-center">
-                <Users className="w-12 h-12 text-orange-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-4">Samenleving</h3>
-                <p className="text-gray-400">
-                  Participatie in de samenleving en sociale contacten versterken.
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-
       </div>
     </section>
   );
