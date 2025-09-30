@@ -56,8 +56,8 @@ export default function Contact() {
 
             <Card className="bg-gradient-to-b from-amber-500/10 to-amber-600/10 border-amber-500/20">
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold mb-4">Belangrijke Informatie</h3>
-                <ul className="space-y-3 text-sm">
+                <h3 className="text-lg font-semibold mb-4 text-white">Belangrijke Informatie</h3>
+                <ul className="space-y-3 text-sm text-white">
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-amber-400 rounded-full mt-2 shrink-0"></div>
                     <span>Beperkt aantal plaatsen beschikbaar</span>
@@ -100,7 +100,7 @@ export default function Contact() {
                 <CardTitle className="text-3xl font-bold text-amber-400">Koop je Tickets!</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                <p className="mb-8 max-w-md mx-auto">
+                <p className="mb-8 max-w-md mx-auto text-white">
                   Mis deze unieke ervaring niet en steun tegelijkertijd Bartiméus. De plaatsen zijn beperkt, dus wees er snel bij!
                 </p>
                 <a href="https://eventix.shop/r2trrkkw" target="_blank" rel="noopener noreferrer">
